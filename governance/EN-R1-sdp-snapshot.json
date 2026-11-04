@@ -1,0 +1,146 @@
+{
+  "schema": "BH-SDP-v2.3",
+  "versao_do_protocolo": "2.3",
+  "governance": "BH-SEP v2.3 / BH-SDP v2.3",
+  "programa": "SSSVL — Space Systems Security Validation Lab",
+  "nome_do_projeto": "NASA-NOS3-SECURITY-VALIDATION-v0.1",
+  "mission": "SSSVL-NOS3-EN-R1 — English Canonical Documentation Preparation",
+  "fase_atual": "EN-R1 documentary editorial preparation",
+  "tipo_de_arquitetura": "Independent space systems security validation research documentation",
+  "observed_at": "2026-11-04",
+  "timezone": "America/Sao_Paulo",
+  "authority": {
+    "state": "APPROVED",
+    "scope": "bounded local documentary preparation",
+    "risk": "LOW",
+    "write_boundary": "publication-prep/en-r1/",
+    "remote_publication": "NOT_AUTHORIZED",
+    "nos3_execution": "NOT_AUTHORIZED",
+    "n1b_execution": "NOT_AUTHORIZED",
+    "experimental_security": "NOT_QUALIFIED"
+  },
+  "destino_fisico": {
+    "local_editorial_root": "publication-prep/en-r1/",
+    "future_repository": "https://github.com/bonushora/nasa-nos3-security-validation-v01",
+    "migration": "NÃO_EXECUTADO",
+    "publication": "NÃO_EXECUTADO"
+  },
+  "historical_baseline": {
+    "state": "PASSOU",
+    "artifact_count": 27,
+    "markdown_count": 24,
+    "snapshot_count": 3,
+    "snapshots": {
+      "N0-R1": "097eda1c7eaa93382cba268597f858d53e4e61db47e21c3a34da9f34280d5006",
+      "N1-A": "c56e512acd490cf80bbf3425b6c2bc8cddf73e0a00108f2f1a30b332142b29e0",
+      "N1-A-R2": "738deb0ad600d52a52a1f8a8c15ee75ce060c1c99f84fdbb1a4937afe6eb99aa"
+    },
+    "internal_hash_readback": "PASS:24",
+    "unexpected_discrepancies": 0,
+    "historical_files_modified": 0
+  },
+  "editorial_set": {
+    "english_markdown_counterparts": 24,
+    "governance_explanatory_views": 3,
+    "mapping_entries": 27,
+    "canonical_language": "English",
+    "original_language_archive": "Portuguese byte-for-byte archive planned; migration not performed",
+    "review_required": 0,
+    "silent_contradiction_repairs": 0
+  },
+  "estado_green": {
+    "codigo": "NOT_APPLICABLE",
+    "backend": "NOT_APPLICABLE",
+    "interface": "NOT_APPLICABLE",
+    "operacao": "NÃO_EXECUTADO",
+    "implantacao": "NÃO_EXECUTADO",
+    "documentacao": "PASSOU",
+    "preparacao_documental": "PASSOU",
+    "completude_traducao": "PASSOU",
+    "equivalencia_semantica": "PASSOU",
+    "integridade_baseline_historica": "PASSOU",
+    "prontidao_divulgacao_publica": "PASSOU",
+    "proveniencia_transitiva": "DEFERRED",
+    "execucao_n1b": "NÃO_EXECUTADO",
+    "publicacao_git": "NÃO_EXECUTADO",
+    "validacao_experimental": "NÃO_EXECUTADO"
+  },
+  "estado_green_justificativas": {
+    "documentacao": "All 24 historical Markdown sources have reviewed English counterparts; three immutable governance snapshots have separate explanatory views.",
+    "integridade_baseline_historica": "Expected snapshot hashes and 24 internally recorded artifact hashes reproduced before writing; final readback reproduced them again.",
+    "prontidao_divulgacao_publica": "English set passed disclosure review; exact historical artifacts containing absolute local paths are controlled as DERIVED_PUBLIC_VERSION_ONLY.",
+    "proveniencia_transitiva": "Root tree OID, immutable binding for 47 entries, target reachability, and recursive provenance remain blocked from N1-A-R2.",
+    "execucao_n1b": "N1-B required separate authorization and remained NOT_AUTHORIZED.",
+    "publicacao_git": "Remote publication and Git commits are outside authority.",
+    "validacao_experimental": "NOS3, cFS, F Prime, builds, simulators, and adversarial experiments were not executed."
+  },
+  "acceptance": {
+    "criteria_total": 10,
+    "criteria_pass": 10,
+    "criteria_blocked": 0,
+    "criteria_status": {
+      "1_historical_baseline_integrity": "PASS",
+      "2_source_markdown_accounting": "PASS",
+      "3_english_counterparts_present": "PASS",
+      "4_technical_identifiers_preserved": "PASS",
+      "5_relative_links_resolve": "PASS",
+      "6_json_syntax": "PASS",
+      "7_mapping_and_hashes": "PASS",
+      "8_status_separation": "PASS",
+      "9_public_disclosure_review": "PASS",
+      "10_historical_and_remote_non_modification": "PASS"
+    }
+  },
+  "local_validation": {
+    "historical_snapshot_hashes": "PASS:3",
+    "historical_internal_artifact_hashes": "PASS:24",
+    "source_map_hash_readback": "PASS:27",
+    "relative_markdown_links": "PASS:29",
+    "json_parse": "PASS",
+    "absolute_personal_paths_in_english_set": 0,
+    "readme_required_disclaimer": "PASS",
+    "status_statements": "PASS",
+    "git_repository_available_at_workspace_root": false,
+    "git_directory_state": "PRESENT_EMPTY_NOT_A_REPOSITORY",
+    "remote_mutation_attempts": 0
+  },
+  "ancoras_fisicas": {
+    "historical_source_map": {
+      "path": "evidence/historical-source-map.json",
+      "sha256": "2df4eefd4415227b1ed5772c69d70556f4815f4034819d7cb6317f65ed74b5cc"
+    },
+    "semantic_equivalence_matrix": {
+      "path": "evidence/semantic-equivalence-matrix.md",
+      "sha256": "25d60bbb03e27e1e8c853ab3cb47500f98d9bc0e524a0ccd78cd3e446eed0e1e"
+    },
+    "disclosure_review": {
+      "path": "evidence/disclosure-review.md",
+      "sha256": "caf297d76a10a87eac1c14a58ba52c8660a19001a2009ce3c139dd5b7cd157f5"
+    },
+    "archive_plan": {
+      "path": "archive/original-pt/README.md",
+      "sha256": "e0d9afcb132ca3c728637712b7e25a9035dfe69b530182f352bc9a0d3bedf4d0"
+    }
+  },
+  "limitations": [
+    "English translation and editorial review are not new technical verification.",
+    "The root Git tree OID remains unavailable.",
+    "The 44 candidate gitlink SHAs remain PARTIAL.",
+    "Three declared paths remain UNAVAILABLE at immutable-tree verification level.",
+    "Target-commit reachability and recursive provenance remain blocked.",
+    "No software execution, security experiment, qualification, certification, or flight-readiness assessment occurred.",
+    "No Git metadata is present at the workspace root, so repository status cannot be inspected locally; no Git or remote mutation command was issued."
+  ],
+  "itens_deferred": [
+    "Byte-for-byte archive migration under separate authority",
+    "Git commit and remote publication",
+    "Immutable root-tree and gitlink recovery",
+    "Recursive provenance closure",
+    "NOS3 experimental security validation"
+  ],
+  "proximo_passo": "Under separate publication authority, re-read hashes, decide handling of restricted byte-identical Portuguese originals, stage only the reviewed EN-R1 set, inspect the Git diff, and publish through a reviewed commit/PR workflow. Do not execute NOS3 as part of publication.",
+  "marker": "EN_R1_DOCUMENTATION_GREEN=PASS",
+  "REMOTE_PUBLICATION": "NOT_AUTHORIZED",
+  "NOS3_EXECUTION": "NOT_AUTHORIZED",
+  "EXPERIMENTAL_SECURITY": "NOT_QUALIFIED"
+}
