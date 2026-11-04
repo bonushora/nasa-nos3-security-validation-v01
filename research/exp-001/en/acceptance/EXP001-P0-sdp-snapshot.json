@@ -1,0 +1,122 @@
+{
+  "schema": "BH-SDP-v2.3",
+  "versao_do_protocolo": "2.3",
+  "governance": "BH-SEP v2.3 / BH-SDP v2.3",
+  "programa": "SSSVL — Space Systems Security Validation Lab",
+  "nome_do_projeto": "NASA-NOS3-SECURITY-VALIDATION-v0.1",
+  "experiment_id": "SSSVL-EXP001-P0",
+  "scientific_title": "Independent Verification of Command Effects Under Retry and Recovery in Simulated Space Systems",
+  "fase_atual": "P0 documentary experimental protocol",
+  "observed_at": "2026-11-04T15:57:33-03:00",
+  "timezone": "America/Sao_Paulo",
+  "authority": {
+    "scope": "local documentary work only",
+    "risk": "LOW",
+    "nos3_execution": "NOT_AUTHORIZED",
+    "cfs_execution": "NOT_AUTHORIZED",
+    "fprime_execution": "NOT_AUTHORIZED",
+    "containers": "NOT_AUTHORIZED",
+    "adversarial_experiments": "NOT_AUTHORIZED",
+    "remote_mutation": "NOT_AUTHORIZED"
+  },
+  "publication_prerequisite": {
+    "state": "PASSOU",
+    "repository": "https://github.com/bonushora/nasa-nos3-security-validation-v01",
+    "commit": "778eadc9e9c091657370ba01322ac0ddf7585f2d",
+    "tree_oid": "b5ff7c02cabba3e990aca0510fde9f23cb119f39",
+    "pub_r1_snapshot": "publication-prep/pub-r1-closure/PUB-R1-R1-sdp-snapshot.json",
+    "pub_r1_snapshot_sha256": "ffe83b773cf2d23322822761b1c935f1b8ecfb4ac7f482d3fec93da532c20184"
+  },
+  "subject_identity": {
+    "nos3_repository": "https://github.com/nasa/nos3",
+    "nos3_commit": "5a3bdee6be9a2c67fdf994ae6db56d5c60395302",
+    "transitive_provenance": "BLOCKED",
+    "root_tree_oid": "UNAVAILABLE",
+    "gitlink_state": "44_PARTIAL_3_UNAVAILABLE",
+    "physical_experiment_gate": "BLOCKED"
+  },
+  "research_contract": {
+    "question": "Can independently observed system effects be reliably distinguished from command authorization, dispatch, acknowledgements, telemetry, and executor logs under retry, replay, interruption and recovery?",
+    "main_hypothesis": "Authorization, dispatch, effect completion, and independent effect verification are distinct states.",
+    "hypotheses": 8,
+    "synthetic_scenarios": 10,
+    "canonical_event_types": 7,
+    "decision_outcomes": ["PASS", "FAIL", "INCONCLUSIVE", "ABORTED"],
+    "witness_readiness": "CONTRACT_COMPLETE_IMPLEMENTATION_NOT_EXECUTED",
+    "oracle_readiness": "DOCUMENTED_IMPLEMENTATION_NOT_EXECUTED"
+  },
+  "estado_green": {
+    "documentacao_exp001_p0": "PASSOU",
+    "protocolo_cientifico": "PASSOU",
+    "hipoteses": "PASSOU",
+    "modelo_ameacas_fronteiras": "PASSOU",
+    "contrato_witness": "PASSOU",
+    "schema_eventos": "PASSOU",
+    "autoridade_retries": "PASSOU",
+    "cenarios_sinteticos": "PASSOU",
+    "oraculos_deterministicos": "PASSOU",
+    "reprodutibilidade": "PASSOU",
+    "matriz_prontidao": "PASSOU",
+    "prontidao_execucao": "DEFERRED",
+    "proveniencia_transitiva_nos3": "DEFERRED",
+    "execucao_nos3": "NÃO_EXECUTADO",
+    "experimentos_adversariais": "NÃO_EXECUTADO",
+    "seguranca_experimental": "NOT_APPLICABLE",
+    "mutacao_remota": "NÃO_EXECUTADO"
+  },
+  "acceptance": {
+    "criteria_total": 12,
+    "criteria_pass": 12,
+    "criteria_blocked": 0,
+    "criteria_failed": 0,
+    "matrix": "acceptance/experimental-readiness-matrix.md",
+    "execution_readiness": "BLOCKED"
+  },
+  "artifact_inventory": {
+    "artifact_count": 12,
+    "markdown_count": 10,
+    "json_count": 2,
+    "snapshot_self_excluded_from_hash_anchors": true,
+    "sha256": {
+      "protocol/EXP001-P0-scientific-protocol-v0.1.md": "2f6e7cf01dc41504f3fafacb56eaaa0a6f05982147923181506014d69a7b1fae",
+      "protocol/hypotheses-and-null-hypotheses.md": "64b6ba9a1ae3f34e21fc8095a1bd109bfe98ebc2a32b79f136db3f04f72b6a39",
+      "protocol/threat-model-and-trust-boundaries.md": "b5b492d63cd6d1383fe6eafb393750827f50e7380a276abbd53948c1ff2d611c",
+      "protocol/synthetic-fault-scenarios.md": "5746f5bd258b174ae949426fd58fcd39faf30c0c972281ecab216e421db0c893",
+      "protocol/deterministic-oracles.md": "6f54152da1faeb9301c0b68cef753e8de4e7c66e756a22ec353e64ae387fde84",
+      "evidence-contract/independent-effect-witness-contract.md": "6a34fd752d2d19287d26e15470ccb59eed800297fd3b2353e2a95ff8f30c7cb9",
+      "evidence-contract/canonical-command-effect-event-schema.json": "1f0513af48709008326beabf54d9cb1d5a527eb9f322bdf4c2d88bdbed659741",
+      "evidence-contract/authority-accounting-and-retry-semantics.md": "db62c34299d14ced0b67d6b3b041fa9d4b8e3d03aa460e3b29c34b4764dc34ab",
+      "evidence-contract/evidence-provenance-and-reproducibility.md": "99d196b14901c815b8d99e94dc7c85b2b4edd5d2e8db7ba59f5ba92a3adcd6e6",
+      "acceptance/decision-rules.md": "1791e309065e73d13930e859ec60ba141f75e927a3e61cd56c1d83926a451382",
+      "acceptance/experimental-readiness-matrix.md": "7dd985bd9e0d782d6a7201b8e3eb16c369f3dd8ad537768294b4b96765c7f8e0"
+    }
+  },
+  "local_validation": {
+    "required_files": "PASS:12",
+    "json_parse": "PASS:2",
+    "relative_links": "PASS",
+    "hypothesis_coverage": "PASS:H1-H8",
+    "scenario_coverage": "PASS:S01-S10",
+    "scenario_required_fields": "PASS:9_PER_SCENARIO",
+    "canonical_event_types": "PASS:7",
+    "decision_states": "PASS:4",
+    "authority_and_security_states": "PASS:INDEPENDENT",
+    "historical_baseline_integrity": "PASS:3_SNAPSHOTS_24_INTERNAL_HASHES"
+  },
+  "limitations": [
+    "P0 is documentary and contains no experimental observation.",
+    "The Independent Effect Witness and deterministic oracle are contracts, not implementations.",
+    "Repetition counts beyond a three-run deterministic fixture minimum require calibration and preregistration.",
+    "NOS3 transitive provenance remains blocked.",
+    "No exactly-once behavior is assumed.",
+    "No security, operational, or flight qualification is established."
+  ],
+  "proximo_passo": "Under new bounded execution authority, perform EXP001-P1 only against an offline non-NOS3 synthetic fixture to implement and validate the schema, authority ledger, witness journal, oracle, uncertainty handling, and negative controls. Do not execute NOS3 until all physical readiness gates pass.",
+  "marker": "EXP001_P0_DOCUMENTATION_GREEN=PASS",
+  "EXP001_EXECUTION_READINESS": "BLOCKED",
+  "NOS3_TRANSITIVE_PROVENANCE": "BLOCKED",
+  "NOS3_EXECUTION": "NOT_AUTHORIZED",
+  "ADVERSARIAL_EXPERIMENTS": "NOT_EXECUTED",
+  "EXPERIMENTAL_SECURITY": "NOT_QUALIFIED",
+  "REMOTE_MUTATION": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sssvl.invalid/schema/exp001-command-effect-event-v0.1.json",
+  "title": "Evento canônico de comando e efeito SSSVL EXP001",
+  "description": "Schema documental. Não constitui evidência de execução nem autorização operacional.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "experiment_id",
+    "run_id",
+    "scenario_id",
+    "intent_id",
+    "command_id",
+    "attempt_id",
+    "boot_epoch",
+    "causal_parent_event_ids",
+    "authority",
+    "effect",
+    "time",
+    "producer",
+    "evidence",
+    "outcome",
+    "details"
+  ],
+  "properties": {
+    "schema_version": {"const": "SSSVL-EXP001-EVENT-v0.1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {
+      "enum": [
+        "COMMAND_RECEIVED",
+        "COMMAND_AUTHORIZED",
+        "COMMAND_DISPATCHED",
+        "EFFECT_ATTEMPTED",
+        "EFFECT_OBSERVED",
+        "EFFECT_INDEPENDENTLY_VERIFIED",
+        "EFFECT_RECONCILED"
+      ]
+    },
+    "experiment_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "scenario_id": {"type": "string", "pattern": "^S(0[1-9]|10)$"},
+    "intent_id": {"type": "string", "minLength": 1},
+    "command_id": {"type": "string", "minLength": 1},
+    "attempt_id": {"type": "string", "minLength": 1},
+    "boot_epoch": {"type": "string", "minLength": 1},
+    "causal_parent_event_ids": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grant_id", "authority_id", "scope_digest", "decision", "effect_budget", "budget_consumed", "validity", "new_authority_explicit"],
+      "properties": {
+        "grant_id": {"type": ["string", "null"]},
+        "authority_id": {"type": ["string", "null"]},
+        "scope_digest": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "decision": {"enum": ["ALLOW", "DENY", "NOT_EVALUATED", "UNKNOWN"]},
+        "effect_budget": {"type": "integer", "minimum": 0},
+        "budget_consumed": {"type": "integer", "minimum": 0},
+        "validity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["not_before", "not_after"],
+          "properties": {
+            "not_before": {"type": ["string", "null"]},
+            "not_after": {"type": ["string", "null"]}
+          }
+        },
+        "new_authority_explicit": {"type": "boolean"}
+      }
+    },
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["effect_id", "effect_type", "target", "budget_cost", "state_before_digest", "state_after_digest", "observation_state", "count"],
+      "properties": {
+        "effect_id": {"type": ["string", "null"]},
+        "effect_type": {"type": ["string", "null"]},
+        "target": {"type": ["string", "null"]},
+        "budget_cost": {"type": "integer", "minimum": 0},
+        "state_before_digest": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "state_after_digest": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "observation_state": {"enum": ["NOT_APPLICABLE", "NOT_OBSERVED", "OBSERVED", "PARTIAL", "AMBIGUOUS", "VERIFIED", "UNRESOLVED"]},
+        "count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["simulated_tick", "monotonic_ns", "wall_time", "uncertainty_ns", "clock_id"],
+      "properties": {
+        "simulated_tick": {"type": ["integer", "null"], "minimum": 0},
+        "monotonic_ns": {"type": "integer", "minimum": 0},
+        "wall_time": {"type": ["string", "null"]},
+        "uncertainty_ns": {"type": "integer", "minimum": 0},
+        "clock_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["producer_id", "producer_role", "sequence", "software_digest", "configuration_digest"],
+      "properties": {
+        "producer_id": {"type": "string", "minLength": 1},
+        "producer_role": {"enum": ["RECEIVER", "AUTHORIZER", "DISPATCHER", "EXECUTOR", "TELEMETRY", "WITNESS", "RECONCILER"]},
+        "sequence": {"type": "integer", "minimum": 0},
+        "software_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "configuration_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "source_class", "independent_of_executor", "payload_digest", "previous_record_digest", "health_state", "drop_count"],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "source_class": {"enum": ["INGRESS", "POLICY", "DISPATCH", "EXECUTOR", "STATE_INTERFACE", "REDUNDANT_SENSOR", "TRAFFIC_CAPTURE", "TELEMETRY", "LOG", "RECONCILIATION"]},
+        "independent_of_executor": {"type": "boolean"},
+        "payload_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "previous_record_digest": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "health_state": {"enum": ["HEALTHY", "DEGRADED", "UNHEALTHY", "UNKNOWN"]},
+        "drop_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "outcome": {"enum": ["PENDING", "ALLOW", "DENY", "SUCCESS", "NO_EFFECT", "PARTIAL", "FAILURE", "AMBIGUOUS", "RECONCILED", "UNRESOLVED"]},
+    "details": {"type": "object"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"event_type": {"const": "EFFECT_INDEPENDENTLY_VERIFIED"}}},
+      "then": {
+        "properties": {
+          "evidence": {"properties": {"independent_of_executor": {"const": true}, "health_state": {"const": "HEALTHY"}}},
+          "effect": {"properties": {"observation_state": {"const": "VERIFIED"}}}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "EFFECT_RECONCILED"}}},
+      "then": {"properties": {"outcome": {"enum": ["RECONCILED", "UNRESOLVED", "NO_EFFECT", "PARTIAL", "AMBIGUOUS"]}}}
+    }
+  ]
+}

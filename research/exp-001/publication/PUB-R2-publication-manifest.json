@@ -1,0 +1,210 @@
+{
+  "schema": "SSSVL-PUB-R2-PUBLICATION-MANIFEST-v1",
+  "project": "NASA-NOS3-SECURITY-VALIDATION-v0.1",
+  "publication": "PUB-R2",
+  "languages": [
+    "en",
+    "pt-BR"
+  ],
+  "hash_algorithm": "SHA-256",
+  "parent_commit": "778eadc9e9c091657370ba01322ac0ddf7585f2d",
+  "parent_tree": "b5ff7c02cabba3e990aca0510fde9f23cb119f39",
+  "manifest_scope": "candidate files before this self-excluded manifest",
+  "self_hash_excluded": true,
+  "file_count_hashed": 37,
+  "files": [
+    {
+      "path": "README.en.md",
+      "sha256": "c2cd29e10d4d655798ce444494e083acb9fbd107193032bc4db7e5e9a26c3613",
+      "bytes": 4320
+    },
+    {
+      "path": "README.md",
+      "sha256": "e4716988d276a0180263b880e93c60b0b4bea579fc873103cadc41b2a5e231b0",
+      "bytes": 1018
+    },
+    {
+      "path": "README.pt-BR.md",
+      "sha256": "77f4b4e81e6c74d3a3983ea3a55c21e750aa4857565c223e522862dd573c751f",
+      "bytes": 4266
+    },
+    {
+      "path": "research/exp-001/README.en.md",
+      "sha256": "c14affd8e6fe9427d01cb3c49918421b30925d2ee34decc9fed5aadc488de431",
+      "bytes": 1203
+    },
+    {
+      "path": "research/exp-001/README.md",
+      "sha256": "598268a5f21017f544a35fa96c9a05d6892958add90572497d0c6724280a7be9",
+      "bytes": 728
+    },
+    {
+      "path": "research/exp-001/README.pt-BR.md",
+      "sha256": "02ad85a070dc1bc1df6f05b41fddf35f5744ea146a348b6d8ba37b776ea38a1e",
+      "bytes": 1253
+    },
+    {
+      "path": "research/exp-001/en/acceptance/EXP001-P0-sdp-snapshot.json",
+      "sha256": "8d24103de769159465f8e0a6ddedc93c4b9e57a7066c53578dc9d4302871a962",
+      "bytes": 6298
+    },
+    {
+      "path": "research/exp-001/en/acceptance/decision-rules.md",
+      "sha256": "1791e309065e73d13930e859ec60ba141f75e927a3e61cd56c1d83926a451382",
+      "bytes": 3533
+    },
+    {
+      "path": "research/exp-001/en/acceptance/experimental-readiness-matrix.md",
+      "sha256": "7dd985bd9e0d782d6a7201b8e3eb16c369f3dd8ad537768294b4b96765c7f8e0",
+      "bytes": 3530
+    },
+    {
+      "path": "research/exp-001/en/evidence-contract/authority-accounting-and-retry-semantics.md",
+      "sha256": "db62c34299d14ced0b67d6b3b041fa9d4b8e3d03aa460e3b29c34b4764dc34ab",
+      "bytes": 3564
+    },
+    {
+      "path": "research/exp-001/en/evidence-contract/canonical-command-effect-event-schema.json",
+      "sha256": "1f0513af48709008326beabf54d9cb1d5a527eb9f322bdf4c2d88bdbed659741",
+      "bytes": 6217
+    },
+    {
+      "path": "research/exp-001/en/evidence-contract/evidence-provenance-and-reproducibility.md",
+      "sha256": "99d196b14901c815b8d99e94dc7c85b2b4edd5d2e8db7ba59f5ba92a3adcd6e6",
+      "bytes": 3644
+    },
+    {
+      "path": "research/exp-001/en/evidence-contract/independent-effect-witness-contract.md",
+      "sha256": "6a34fd752d2d19287d26e15470ccb59eed800297fd3b2353e2a95ff8f30c7cb9",
+      "bytes": 4492
+    },
+    {
+      "path": "research/exp-001/en/protocol/EXP001-P0-scientific-protocol-v0.1.md",
+      "sha256": "2f6e7cf01dc41504f3fafacb56eaaa0a6f05982147923181506014d69a7b1fae",
+      "bytes": 7550
+    },
+    {
+      "path": "research/exp-001/en/protocol/deterministic-oracles.md",
+      "sha256": "6f54152da1faeb9301c0b68cef753e8de4e7c66e756a22ec353e64ae387fde84",
+      "bytes": 3576
+    },
+    {
+      "path": "research/exp-001/en/protocol/hypotheses-and-null-hypotheses.md",
+      "sha256": "64b6ba9a1ae3f34e21fc8095a1bd109bfe98ebc2a32b79f136db3f04f72b6a39",
+      "bytes": 3739
+    },
+    {
+      "path": "research/exp-001/en/protocol/synthetic-fault-scenarios.md",
+      "sha256": "5746f5bd258b174ae949426fd58fcd39faf30c0c972281ecab216e421db0c893",
+      "bytes": 12710
+    },
+    {
+      "path": "research/exp-001/en/protocol/threat-model-and-trust-boundaries.md",
+      "sha256": "b5b492d63cd6d1383fe6eafb393750827f50e7380a276abbd53948c1ff2d611c",
+      "bytes": 4154
+    },
+    {
+      "path": "research/exp-001/pt-BR/acceptance/EXP001-P0-sdp-snapshot.json",
+      "sha256": "86de70f02d5830125858689f9de54ace69a94997780841ef8af0774345eba550",
+      "bytes": 6938
+    },
+    {
+      "path": "research/exp-001/pt-BR/acceptance/decision-rules.md",
+      "sha256": "245c9c6e0b8a9c77dc4bf3feaf649beffaa42391773b5a6c91fd07df62f3ac8c",
+      "bytes": 2903
+    },
+    {
+      "path": "research/exp-001/pt-BR/acceptance/experimental-readiness-matrix.md",
+      "sha256": "180e4f1506ae472911c5d2e7915c8d8b8b0acb078256bbc98d4c07350d7547b3",
+      "bytes": 2969
+    },
+    {
+      "path": "research/exp-001/pt-BR/evidence-contract/authority-accounting-and-retry-semantics.md",
+      "sha256": "b66902beeb248ca5a72963996eb38d3c71f9bba2e51dd6ef29a80e64d84aa343",
+      "bytes": 2923
+    },
+    {
+      "path": "research/exp-001/pt-BR/evidence-contract/canonical-command-effect-event-schema.json",
+      "sha256": "c8a6817cc732bc4849f790ac103af7ae0b6f038829a30b10150cc3ae78954758",
+      "bytes": 6234
+    },
+    {
+      "path": "research/exp-001/pt-BR/evidence-contract/evidence-provenance-and-reproducibility.md",
+      "sha256": "370e864212631d235ef2d1a9ee2a7fdb15a0add0cf89cbf1c8f5ff92d376ce4a",
+      "bytes": 2842
+    },
+    {
+      "path": "research/exp-001/pt-BR/evidence-contract/independent-effect-witness-contract.md",
+      "sha256": "45f90e3abb57a12ada49f41c431bd236c236a58115ddf1e4f366ae69b36b4521",
+      "bytes": 3725
+    },
+    {
+      "path": "research/exp-001/pt-BR/protocol/EXP001-P0-scientific-protocol-v0.1.md",
+      "sha256": "fe4b0cd6a3e6c2ec1c5c69ae6a984871c87bce5f14802cdfb5c053809f7d8c6f",
+      "bytes": 7548
+    },
+    {
+      "path": "research/exp-001/pt-BR/protocol/deterministic-oracles.md",
+      "sha256": "6927d6b201d65b640cc19eb734d80ff24e4d43d46b2e5a8883845f509fe9c3a1",
+      "bytes": 2977
+    },
+    {
+      "path": "research/exp-001/pt-BR/protocol/hypotheses-and-null-hypotheses.md",
+      "sha256": "c267b057ac3361a7c4f1c43e1206bf6c2054a0c5f5912337764b817647fac150",
+      "bytes": 3249
+    },
+    {
+      "path": "research/exp-001/pt-BR/protocol/synthetic-fault-scenarios.md",
+      "sha256": "86d7377feb93db07375a92e2f4669b4dc77e1b57a58a51d98955a552d4f5f6fa",
+      "bytes": 10561
+    },
+    {
+      "path": "research/exp-001/pt-BR/protocol/threat-model-and-trust-boundaries.md",
+      "sha256": "fee264cf35e6dab87a85c36d336059d37b632716206214108a7c377d1537b07d",
+      "bytes": 3812
+    },
+    {
+      "path": "research/exp-001/publication/disclosure-review.en.md",
+      "sha256": "9b68cef0e380e91937c915fd999c9d2c74c7da58b27a2a260eb13f5267d3303f",
+      "bytes": 1745
+    },
+    {
+      "path": "research/exp-001/publication/disclosure-review.pt-BR.md",
+      "sha256": "9cf60db8129dc430d59ca8eee7d8f576ae5147e61bf7e0f62400dc18928d444f",
+      "bytes": 1847
+    },
+    {
+      "path": "research/exp-001/publication/equivalence-matrix.en.md",
+      "sha256": "e5c5d83448fd3c9b6cb39ce363e9e4974692310f02d7ce6ca64299211a0613b4",
+      "bytes": 4404
+    },
+    {
+      "path": "research/exp-001/publication/equivalence-matrix.pt-BR.md",
+      "sha256": "4c55e3940d9a9b7ce8424750a671c7ca682f773b62eb1dd18ca645cf2b0ba7cd",
+      "bytes": 4559
+    },
+    {
+      "path": "research/exp-001/publication/future-archival-metadata.en.md",
+      "sha256": "834ff43b8624358a180f4c687f810449d013a956401200573da63c445f5ed158",
+      "bytes": 1073
+    },
+    {
+      "path": "research/exp-001/publication/future-archival-metadata.pt-BR.md",
+      "sha256": "208f06d7f4d5e97e1630368353784d68a7760e5451bac5212f57745c58501636",
+      "bytes": 1042
+    },
+    {
+      "path": "research/exp-001/publication/source-to-translation-manifest.json",
+      "sha256": "e5787fa7a44b3045183003790a5e2940ce3088803d7c12a386a919de204198ee",
+      "bytes": 9015
+    }
+  ],
+  "scientific_states": {
+    "EXP001_P0_DOCUMENTATION_GREEN": "PASS",
+    "NOS3_TRANSITIVE_PROVENANCE": "BLOCKED",
+    "NOS3_EXECUTION": "NOT_AUTHORIZED",
+    "ADVERSARIAL_EXPERIMENTS": "NOT_EXECUTED",
+    "EXPERIMENTAL_SECURITY": "NOT_QUALIFIED"
+  },
+  "publication_state": "LOCAL_CANDIDATE_VALIDATED_REMOTE_PUBLICATION_PENDING"
+}
